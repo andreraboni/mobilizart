@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<h1>DASHBOARD ACCOUNTS</h1>
+{% include 'parcials/_messages.html' %}
+
+<p>
+    <a href="{% url 'listar'%}" class="btn btn-info btn-lg">
+      <span class="glyphicon glyphicon-log-in"></span> Lista de Usuários
+    </a>
+    <a href="{% url 'nova_categoria'%}" class="btn btn-info btn-lg">
+      <span class="glyphicon glyphicon-log-in"></span> Adicionar Categoria
+    </a>
+    <a href="{% url 'cadastro_accounts' %}" class="btn btn-info btn-lg">
+      <span class="glyphicon glyphicon-log-in"></span> Cadastrar nova conta
+    </a>
+    <a href="{% url 'logout'%}" class="btn btn-info btn-lg">
+      <span class="glyphicon glyphicon-log-out"></span> Logout
+    </a>
+</p>
+
+{% endblock %}

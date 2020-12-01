@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<div class="titulo">EDIÇÃO DE ARTISTA CADASTRADO </div>
+<br><br>
+<div class="container">
+    <!-- Create a Form -->
+    <form method="POST" enctype="multipart/form-data">
+        <!-- Security token by Django -->
+        {% csrf_token %}
+    <table class="table">
+        <!-- form as paragraph -->
+        {{ form.as_p }}
+        <tr>
+            <td colspan="2">
+            <br>
+        <input type="submit" value="Update">
+        </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+{%endblock%}

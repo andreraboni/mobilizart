@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{%block content%}
+
+<div class="titulo"> PREENCHA O FORMULÁRIO </div>
+
+<br> <br>
+{% include 'parcials/_messages.html'%}
+
+<div class="container">
+    <form action="{%url 'cadastrar'%}" method="POST" enctype="multipart/form-data">
+         {% csrf_token %}
+        <table class="table">
+            {{form}}
+            <tr>
+                <td colspan="2">
+                    <br>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+
+{%endblock%}
